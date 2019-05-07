@@ -119,6 +119,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
 
                 $.ajax({
                     url: url,
+                    type: "POST",
                     data: data,
                     success: successCallback,
                     dataType: 'jsonp',

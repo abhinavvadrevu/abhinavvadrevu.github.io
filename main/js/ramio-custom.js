@@ -121,7 +121,7 @@ $(function() {
   // KBW-Countdown Start
   // --------------------------------------------- //
   $(function () {
-    $('#countdown').countdown({until: $.countdown.UTCDate(+10, 2018, 10, 7), format: 'D'});
+    $('#countdown').countdown({until: $.countdown.UTCDate(+10, 2019, 5, 20), format: 'D'});
   });
   // --------------------------------------------- //
   // KBW-Countdown End
@@ -142,7 +142,7 @@ $(function() {
   // --------------------------------------------- //
   $('.notify-form').ajaxChimp({
     callback: mailchimpCallback,
-    url: 'https://besaba.us10.list-manage.com/subscribe/post?u=e8d650c0df90e716c22ae4778&amp;id=cda9d4d43c'
+    url: 'https://gmail.us20.list-manage.com/subscribe/post?u=50cfaaff50d5c40a4bfee1b5c&amp;id=71bd8879fc'
   });
 
   function mailchimpCallback(resp) {
