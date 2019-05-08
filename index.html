@@ -148,9 +148,9 @@ mixpanel.init("a25ad302ab9d8df7b9f959c721dc3380");</script><!-- end Mixpanel -->
             <div class="menu">
               <nav>
                 <ul>
-                  <li><a href="#" id="about-trigger">Learn More</a></li>
+                  <li><a href="javascript:;" id="about-trigger" onclick="mixpanel.track('Click Learn More')">Learn More</a></li>
                   <!-- <li><a href="#" id="works-trigger">Our works</a></li> -->
-                  <li><a href="#" id="contact-trigger">Contact</a></li>
+                  <li><a href="javascript:;" id="contact-trigger" onclick="mixpanel.track('Click Contact')">Contact</a></li>
                 </ul>
               </nav>
             </div>
@@ -200,7 +200,7 @@ mixpanel.init("a25ad302ab9d8df7b9f959c721dc3380");</script><!-- end Mixpanel -->
                 Enter the waitlist to get Amiga free for one week (Normally $9/mo).
               </p>
               <a href="#" class="btn btn-l btn-light-outline" id="notify-trigger">
-                <span class="btn-caption">Enter waitlist</span>
+                <span class="btn-caption" onclick="mixpanel.track('Click Enter Waitlist')">Enter waitlist</span>
               </a>
               <!-- Headline Content End -->
 
