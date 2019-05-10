@@ -129,7 +129,6 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                 });
                 
                 var email_address = data['EMAIL'];
-                mixpanel.identify(email_address);
                 mixpanel.people.set({
                     "$email": email_address,
                 });
