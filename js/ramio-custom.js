@@ -82,8 +82,10 @@ $(function() {
   var bgndVideo = $("#bgndVideo");
   if(bgndVideo.length){
     bgndVideo.mb_YTPlayer({
+      abundance: 0.05,
       mute: true,
       containment: '#video-wrapper',
+      optimizeDisplay: true,
       showControls:false,
       autoPlay:true,
       loop:true,
