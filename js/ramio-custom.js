@@ -133,7 +133,9 @@ $(function() {
   // Custom Scrollbar Start
   // --------------------------------------------- //
   $(window).on("load",function(){
-    $(".about-info, .works-info, .contact-info").mCustomScrollbar();
+    $(".about-info, .works-info, .contact-info").mCustomScrollbar({
+      scrollInertia:300
+    });
   });
   // --------------------------------------------- //
   // Custom Scrollbar End
