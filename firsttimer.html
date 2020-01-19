@@ -37,25 +37,23 @@ mixpanel.identify(mixpanel_identifier);
 <script src="https://js.stripe.com/v3/"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
-
-  var BASE_URL = 'https://amiga-prod.herokuapp.com';
-  // var BASE_URL = '';
-  var STRIPE_PUBLISHABLE_API_KEY = 'pk_live_LhUEAXL5ux3XXpClu4SQl1m900QvXGzmxZ';
-
-  function getStripeSessionID() {
-    var jqxhr = $.post(
-      BASE_URL+"/payment/create/anon_session"
-    ).done(function(resp) {
-      var sessionId = resp['sessionId'];
-      localStorage.setItem('stripeSessionId', sessionId);
-    });
+  
+  function getPageStripeSessionId() { // Gets session id from hidden page element
+    var sessionIdEl = $("#stripeSessionId");
+    return sessionIdEl.attr("value");
   }
-  getStripeSessionID();
+
+  function getStripeKey() {
+    var sessionIdEl = $("#stripePublishableKey");
+    return sessionIdEl.attr("value");
+  }
 
   function upgrade() {
-    var stripe = Stripe(STRIPE_PUBLISHABLE_API_KEY);
+    var stripeKey = getStripeKey();
+    var stripe = Stripe(stripeKey);
+    var sessionId = getPageStripeSessionId();
     stripe.redirectToCheckout({
-      sessionId: localStorage.getItem('stripeSessionId')
+      sessionId: sessionId
     }).then(function (result) {
       // TODO
       // If `redirectToCheckout` fails due to a browser or network
